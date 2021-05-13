@@ -1,0 +1,36 @@
+.work__contents-inner {
+    &:not(:first-of-type) {
+        margin-top: 40px;
+    }
+}
+.work__heading {
+    color: $keycolor;
+    font-size: rem(32);
+    @include clippath-animation;
+}
+
+.work__txt {
+    margin-top: 8px;
+    line-height: 2;
+    @include clippath-animation;
+}
+
+.work__link {
+    position: relative;
+    color: #333;
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: -2px;
+		transform: translateX(-50%);
+		width: 100%;
+		height: 2px;
+		background: $gradient;
+	}
+}
+
+.work__img {
+    margin-top: 80px;
+    text-align: center;
+}

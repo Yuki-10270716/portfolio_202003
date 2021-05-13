@@ -1,0 +1,130 @@
+/* -----------------------------------------------------------------------------
+	section
+----------------------------------------------------------------------------- */
+.section {
+    padding-top: 160px;
+    background: $basecolor;
+	&.-contact {
+		padding-bottom: 160px;
+		text-align: center;
+	}
+}
+
+.section__title {
+	font-size: rem(40);
+	text-align: center;
+    span {
+		position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 4px;
+            background: $gradient;
+		}
+    }
+}
+
+.section__inner {
+	@include inner;
+}
+
+.section__container {
+	display: flex;
+	margin-top: 56px;
+	&.-about {
+		flex-direction: row-reverse;
+		@include media(sp) {
+			flex-direction: column-reverse;
+		}
+	}
+	@include media(sp) {
+        flex-direction: column-reverse;
+    }
+}
+
+.section__content {
+	margin-top: 80px;
+	width: 59.3%;
+	padding: 5rem 5rem calc(5rem + 6px);
+	background: $keycolor;
+	color: #fff;
+	@include media(sp) {
+		width: 100%;
+		margin-top: 24px;
+		padding: 48px 24px calc(48px + 6px);
+    }
+}
+
+.section__txt {
+	font-size: rem(14);
+	line-height: 2.4;
+	&.-about,&.-works,&.-profile {
+		@include clippath-animation;
+	}
+	&.-contact {
+		margin-top: 56px;
+	}
+	&.-profile {
+		margin-top: 24px;
+	}
+}
+
+.section__img-inner {
+	width: 40.7%;
+	@include media(sp) {
+		width: 100%;
+    }
+}
+
+.section__img {
+	@include image-animation;
+}
+
+.section__detail {
+	margin-top: 56px;
+}
+
+.section__link {
+	position:relative;
+	color: #fff;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: #fff;
+		transition: width .6s ease;
+	}
+	&:hover {
+		&:after {
+			width: 120%;
+		}
+	}
+}
+
+.section__mail {
+	display: inline-block;
+	position: relative;
+	margin-top: 40px;
+	font-size: rem(24);
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: -8px;
+		transform: translateX(-50%);
+		width: 100%;
+		height: 4px;
+		background: $gradient;
+	}
+}
+
+.section__mail-link {
+	color: #333;
+}

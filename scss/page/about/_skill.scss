@@ -1,0 +1,81 @@
+.skill__genre {
+    display: inline-block;
+    position: relative;
+    margin-top: 56px;
+    font-size: rem(32);
+    @include clippath-animation;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 112%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 2px;
+        background: $gradient;
+        transition: width 1.4s $easing;
+    }
+    .is-animate & {
+        &:after {
+            width: 40px;
+        }
+    }
+}
+
+.skill__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 168px;
+    @include media(sp) {
+        margin-left: 0;
+    }
+}
+
+.skill__item {
+    margin-top: 24px;
+    &:not(:last-of-type) {
+        margin-right: 40px;
+        @include media(sp) {
+            margin-right: 24px;
+        }
+    }
+}
+
+.skill__inner {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.skill__icon {
+    opacity: 0;
+    transform: translateX(-20%);
+    width: 100px;
+    padding: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: opacity 1.4s $easing,transform 1.4s $easing;
+    .is-animate & {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    @include media(sp) {
+        width: 80px;
+    }
+}
+
+.skill__name {
+    margin-top: 16px;
+    text-align: center;
+    @include clippath-animation;
+    @include media(sp) {
+        margin-top: 8px;
+    }
+}
+
+.skill__txt {
+    margin: 24px 0 0 168px;
+    @include clippath-animation;
+    @include media(sp) {
+        margin-left: 0;
+    }
+}

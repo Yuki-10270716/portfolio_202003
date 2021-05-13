@@ -1,0 +1,9 @@
+.profile__jp {
+    font-size: rem(24);
+    @include clippath-animation;
+}
+
+.profile__en {
+    margin-top: 8px;
+    @include clippath-animation;
+}

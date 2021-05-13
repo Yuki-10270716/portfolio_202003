@@ -1,0 +1,17 @@
+/* -----------------------------------------------------------------------------
+    footer
+----------------------------------------------------------------------------- */
+.footer {
+    padding: 18px 0;
+    background: $gradient;
+}
+
+.footer__inner{
+    @include inner;
+}
+
+.footer__copyright {
+    color: #fff;
+    text-align: center;
+    font-size: rem(10);
+}

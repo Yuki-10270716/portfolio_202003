@@ -1,0 +1,10 @@
+@mixin clippath-animation {
+	span {
+        display: inline-block;
+        clip-path: polygon(0 0,0 100%,0 100%,0 0);
+        transition: clip-path 1.4s $easing;
+        .is-animate & {
+            clip-path: polygon(100% 0,100% 100%,0 100%,0 0);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+/* -----------------------------------------------------------------------------
+    page-animation
+----------------------------------------------------------------------------- */
+.page-animation {
+    .page-animation__element,&:before,&:after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        z-index: 9999;
+        width: 100vw;
+        height: 100%;
+        transition: .6s;
+        pointer-events: none;
+    }
+}
+
+.page-animation {
+    &:before {
+        background: rgba($keycolor,.6);
+    }
+    .page-animation__element {
+        background: rgba($keycolor,.8);
+        transition-delay:.2s;
+    }
+    &:after {
+        background: $keycolor;
+        transition-delay:.3s;
+    }
+}
+
+body.js-page-animation .page-animation {
+    .page-animation__element,&:before,&:after {
+        left: 0;
+    }
+}

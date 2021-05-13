@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// color
+$gradient: linear-gradient(120deg, #0f55b3 0%, #319aed 100%);
+$basecolor: #f6f6f6;
+$keycolor: #0f55b3;
+
+// fontsize
+$baseFontSize: 16;
+html {
+    font-size: $baseFontSize + px;
+}
+
+// easing
+$easing: cubic-bezier(.34,.07,.095,.995);
+
+// breakpoints
+$breakpoints: (
+	minsp: "only screen and (max-width: 480px)",
+	sp: "only screen and (max-width: 768px)",
+	pc: "only screen and (min-width: 769px)",
+);

@@ -1,0 +1,157 @@
+/* -----------------------------------------------------------------------------
+	mv
+----------------------------------------------------------------------------- */
+.mv {
+	position: relative;
+	height: 80vh;
+	margin-right: 50px;
+	&.-lower {
+		height: 60vh;
+		@include media(sp) {
+			height: 40vh;
+		}
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100vw;
+		height: 50%;
+		background: $basecolor;
+	}
+	@include media(sp) {
+		height: 60vh;
+        margin-right: 0;
+    }
+}
+
+.mv__bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	overflow: hidden;
+	height: 100%;
+	width: 61.8666667vw;
+	background: url("/image/img_mv_top.jpg") no-repeat right top / cover;
+	&.-about {
+		background: url("/image/img_mv_about.jpg") no-repeat right top / cover;
+	}
+	&.-works {
+		background: url("/image/img_mv_works.jpg") no-repeat right bottom / cover;
+	}
+	&.-work01 {
+		background: url("/image/img_mv_nakata.jpg") no-repeat center center / cover;
+		@include media(sp) {
+			background-position: right center;
+		}
+	}
+	&.-work02 {
+		background: url("/image/img_mv_30days-trial.jpg") no-repeat center center / cover;
+		@include media(sp) {
+			background-position: right center;
+		}
+	}
+	&.-work03 {
+		background: url("/image/img_mv_8hours.jpg") no-repeat center center / cover;
+		@include media(sp) {
+			background-position: center center;
+		}
+	}
+	&.-work04 {
+		background: url("/image/img_mv_makeVR.jpg") no-repeat center center / cover;
+		@include media(sp) {
+			background-position: center center;
+		}
+	}
+}
+
+.mv__front,.mv__back {
+	position: absolute;
+	top: 50%;
+	right: 48vw;
+	transform: translateY(-50%);
+	@include media(sp) {
+		right: 36vw;
+	}
+	&.-lower {
+		right: 52vw;
+	}
+}
+
+.mv__front {
+	color: #fff;
+}
+
+.mv__back {
+	color: $keycolor;
+
+}
+
+.mv__title {
+	font-size: 9.375vw;
+	@include clippath-animation;
+	span {
+		transition-duration: 1s;
+		transition-delay: 1.4s;
+	}
+	@include media(sp) {
+		font-size: 12.8vw;
+	}
+}
+
+.mv__lead {
+	margin-top: 1.875vw;
+	font-size: 3.75vw;
+	@include clippath-animation;
+	@include media(sp) {
+		font-size: 5.33333333vw;
+	}
+	span {
+		transition-duration: 1s;
+		transition-delay: 1.4s;
+	}
+}
+
+.mv__scroll-icon {
+	position: absolute;
+	bottom: 46px;
+	left: 50px;
+    width: 16px;
+	height: 50px;
+	transition: .6s ease-in-out;
+	@include media(sp) {
+		left: 32px;
+	}
+}
+
+.mv__scroll-txt {
+	writing-mode: vertical-rl;
+}
+
+.mv__scroll-bar {
+	display: block;
+	position: relative;
+	height: 50px;
+	margin-top: 8px;
+	overflow: hidden;
+	&:after {
+		content: "";
+		position: absolute;
+		left: 9px;
+		width: 2px;
+		height: 50px;
+		background-color: #333;
+		animation: scrolldown 1.5s infinite;
+	}
+}
+
+@keyframes scrolldown {
+	0% {
+		transform:translateY(-100%);
+	}
+	to {
+		transform:translateY(100%);
+	}
+}
